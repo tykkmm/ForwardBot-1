@@ -1,0 +1,42 @@
+lines (81 sloc)  2.76 KB
+
+{
+    "name": "ForwardBot",
+    "description": "A bot that can forward files to another channel ",
+    "stack": "container",
+    "keywords": [
+      "telegram",
+      "pyrogram"
+      "forward bot"
+    ],
+    "repository": "https://github.com/VysakhTG/ForwardBot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token.",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "ADMINS": {
+            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "required": true
+        
+        }
+    },
+    "addons": [],
+    "buildpacks": [{
+        "url": "heroku/python"
+    }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
