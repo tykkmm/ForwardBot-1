@@ -1,35 +1,29 @@
 {
     "name": "ForwardBot",
-    "description": "A bot that can forward files to another channel ",
-    "stack": "container",
-    "keywords": [
-      "telegram",
-      "pyrogram"
-      "forward bot"
-    ],
+    "description": "AUTOFORWARD",
     "repository": "https://github.com/VysakhTG/ForwardBot",
+    "keywords": [
+        "telegram bot",
+        "pyrogram"
+    ],
     "env": {
+
+        "OWNER": {
+            "description": "Your Telegram ID",
+            "required": "True"
+        },
         "BOT_TOKEN": {
-            "description": "Your bot token.",
-            "required": true
+            "description": "Get From @BotFather in Telegram",
+            "required": "True"
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
-            "required": true
+            "description": "Your API ID From my.telegram.org",
+            "required": "True"
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
-            "required": true
-       }
-    },
-    "addons": [],
-    "buildpacks": [{
-        "url": "heroku/python"
-    }],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
+            "description": "Your API Hash From my.telegram.org",
+            "required": "True"
         }
     }
+
 }
