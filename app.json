@@ -20,12 +20,7 @@
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
             "required": true
-        },
-        "ADMINS": {
-            "description": "Username or ID of Admin. Separate multiple Admins by space.",
-            "required": true
-        
-        }
+       }
     },
     "addons": [],
     "buildpacks": [{
