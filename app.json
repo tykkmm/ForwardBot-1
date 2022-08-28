@@ -1,5 +1,3 @@
-lines (81 sloc)  2.76 KB
-
 {
     "name": "ForwardBot",
     "description": "A bot that can forward files to another channel ",
