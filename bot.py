@@ -8,6 +8,9 @@ logging.config.fileConfig("logging.conf")
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN 
+from pyrogram.raw.all import layer 
+
 class Bot(Client):
     
     def __init__(self):
