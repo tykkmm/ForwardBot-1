@@ -10,7 +10,6 @@ import json
 import base64
 logger = logging.getLogger(__name__) 
 
-FLOOD = int(environ.get("FLOOD", "10"))
 START_PIC = environ.get("START_PIC", "https://telegra.ph/file/c832b9b2cf56637e762e9.jpg") 
 
 @Client.on_message(filters.private & filters.command(["start"])) 
