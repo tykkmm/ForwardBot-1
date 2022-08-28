@@ -12,7 +12,7 @@ async def forward(client, message):
     msg2 = await bot.ask(m.chat.id, "**Send Ending Message from same chat**") 
     # print(msg1.forward_from_message_id, msg1.forward_from_chat.id, msg1.forward_from_message_id) 
     i_chat = msg1.forward_from_chat.id 
-    s_msg = int(msg1.forward_from_message_id
+    s_msg = int(msg1.forward_from_message_id)
     f_msg = int(msg2.forward_from_message_id)+1 
     await m.reply_text('**Forwarding Started**\n\nPress /restart to Stop and /log to get log TXT file') 
     try:      
