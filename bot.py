@@ -10,6 +10,8 @@ logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
 from info import SESSION, API_ID, API_HASH, BOT_TOKEN 
 from pyrogram.raw.all import layer 
+from typing import Union, Optional, AsyncGenerator
+from pyrogram import types
 
 class Bot(Client):
     
