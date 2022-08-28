@@ -27,3 +27,17 @@ async def start(client, message):
            ]]   
           )
        )
+@Client.on_callback_query()
+async def cb_handler(client, query: CallbackQuery):
+    data = query.data 
+    if data == "start":
+        await query.message.edit_text(
+            text=f"""👋 Hai {message.from_user.mention} \nI'm an advanced forward bot with some useful features!""", 
+            reply_markup=InlineKeyboardMarkup( [[
+           InlineKeyboardButton("❤ Support", url='https://t.me/Vysakh_XD'),
+           InlineKeyboardButton("⚡️ Updates", url='https://t.me/Vysakh_XD')
+           ],[
+           InlineKeyboardButton("❓️ Help ❓️", callback_data='help')
+           ]]   
+          )
+       )
