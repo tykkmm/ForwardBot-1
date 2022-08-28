@@ -34,10 +34,19 @@ async def cb_handler(client, query: CallbackQuery):
         await query.message.edit_text(
             text=f"""👋 Hai {message.from_user.mention} \nI'm an advanced forward bot with some useful features!""", 
             reply_markup=InlineKeyboardMarkup( [[
-           InlineKeyboardButton("❤ Support", url='https://t.me/Vysakh_XD'),
-           InlineKeyboardButton("⚡️ Updates", url='https://t.me/Vysakh_XD')
-           ],[
-           InlineKeyboardButton("❓️ Help ❓️", callback_data='help')
-           ]]   
-          )
-       )
+                InlineKeyboardButton("❤ Support", url='https://t.me/Vysakh_XD'),
+                InlineKeyboardButton("⚡️ Updates", url='https://t.me/Vysakh_XD')
+                ],[
+                InlineKeyboardButton("❓️ Help ❓️", callback_data='help')
+                ]]   
+                )
+            )
+        return 
+    elif data == "help":
+        await query.message.edit_text( 
+            text=script.HELP_TXT,
+            reply_markup=InlineKeyboardMarkup( [[ 
+                InlineKeyboardButton("◀️ 𝙱𝙰𝙲𝙺", callback_data = "start")
+                ]]
+                )
+            )
